@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 0;
+    color: hsla(0, 0%, 100%, 0.75);
+}
+
+.container .box {
+    padding: 30px;
+    background-color: hsl(31, 77%, 52%);
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+@media(max-width: 767px) {
+    .container {
+        top: 0;
+        left: 0;
+        height: 100%;
+    }
+}
+
+.container .box:nth-child(2) {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.container .box:nth-child(3) {
+    background-color: hsl(179, 100%, 13%);
+}
+
+.container .box h1 {
+    text-transform: uppercase;
+    margin: 25px 0
+}
+
+.container .box p {
+    line-height: 2;
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.container .box button {
+    margin: 65px 0px 20px;
+    background-color: transparent;
+    border: 1px solid white;
+    width: 120px;
+    height: 45px;
+    border-radius: 32px;
+    text-transform: capitalize;
+    color: hsla(0, 0%, 100%, 0.75);
+    font-family: 'Lexend Deca', sans-serif;
+    cursor: pointer;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+.container .box:nth-child(1) button:hover {
+    background-color: white;
+    color: hsl(31, 77%, 52%);
+}
+
+.container .box:nth-child(2) button:hover {
+    background-color: white;
+    color: hsl(184, 100%, 22%);
+}
+
+.container .box:nth-child(3) button:hover {
+    background-color: white;
+    color: hsl(179, 100%, 13%);
+}
